@@ -6,7 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="../login/" method="post"></form>
+    <form action="../login/" method="post">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Email" id="">
+        <input type="password" name="password" placeholder="Password" id="">
+        <button type="submit">login</button>
+    </form>
     <a href="../register/">Register</a>
 </body>
 </html>
